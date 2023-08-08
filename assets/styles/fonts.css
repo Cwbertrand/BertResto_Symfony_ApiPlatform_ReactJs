@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'Lucy Said Ok';
+    src: url('../fonts/lucy-said/Lucy\ Said\ Ok\ Personal\ Use.ttf') format('truetype');
+}
+
+@keyframes spin {
+    from {
+    transform: rotate(0deg);
+    }
+    to {
+    transform: rotate(360deg);
+    }
+}
+    
+.spin-image {
+    animation: spin 10s infinite linear; /* You can adjust the animation duration and timing function here */
+    margin-top: 5em;
+    width: 70%;
+    text-align: end;
+}

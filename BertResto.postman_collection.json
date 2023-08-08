@@ -1,0 +1,143 @@
+{
+	"info": {
+		"_postman_id": "03812385-97ae-436a-99a7-0e98c174dedf",
+		"name": "BertResto",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "28303287",
+		"_collection_link": "https://universal-comet-474553.postman.co/workspace/BertResto~61e73c6d-04f4-4e31-b9c5-2a3e9c655d24/collection/28303287-03812385-97ae-436a-99a7-0e98c174dedf?action=share&creator=28303287&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Module 1",
+			"item": [
+				{
+					"name": "Register user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"test@test.com\",\r\n    \"password\": \"Pa$$w0rd\",\r\n    \"firstName\": \"test\",\r\n    \"lastName\": \"test 2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://127.0.0.1:8000/api/users"
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Wrong password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test@test.com\",\r\n    \"password\": \"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://127.0.0.1:8000/api/login_check"
+					},
+					"response": []
+				},
+				{
+					"name": "Login - Valid password",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"test@test.com\",\r\n    \"password\": \"Pa$$w0rd\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "https://127.0.0.1:8000/api/login_check"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Module 4",
+			"item": [
+				{
+					"name": "All Food Categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://127.0.0.1:8000/api/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "All menu recipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://127.0.0.1:8000/api/menu_recipes"
+					},
+					"response": []
+				},
+				{
+					"name": "A menu recipe",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://127.0.0.1:8000/api/menu_recipes/1"
+					},
+					"response": []
+				},
+				{
+					"name": "A category",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "https://127.0.0.1:8000/api/categories/9"
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://127.0.0.1:8000"
+		}
+	]
+}
